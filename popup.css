@@ -1,0 +1,120 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #007bff; /* 블루 */
+    --item-bg: #f1f3f5;
+    --border-color: #ddd;
+}
+
+[data-theme="dark"] {
+    --bg-color: #2F3136; /* 애쉬 */
+    --text-color: #e0e0e0;
+    --accent-color: #800020; /* 버건디 */
+    --item-bg: #40444b;
+    --border-color: #555;
+}
+
+body {
+    width: 320px;
+    padding: 15px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 헤더 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+h2 { margin: 0; font-size: 18px; }
+
+.theme-toggle-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* 🟢 원형 토글 스위치 디자인 변경 */
+.switch-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;  /* 너비 */
+    height: 26px; /* 높이 */
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px; /* 캡슐 모양 */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; /* 내부 원 크기 */
+    width: 20px;
+    left: 4px; 
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%; /* 완전한 원 */
+}
+
+input:checked + .slider { background-color: var(--accent-color); }
+input:checked + .slider:before { transform: translateX(22px); }
+
+/* 입력창 및 리스트 */
+.input-group { display: flex; gap: 5px; margin-bottom: 15px; }
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--item-bg);
+    color: var(--text-color);
+}
+#addBtn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ul { list-style: none; padding: 0; margin: 0; }
+li {
+    background-color: var(--item-bg);
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.del-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-weight: bold;
+}

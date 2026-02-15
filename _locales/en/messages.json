@@ -1,0 +1,10 @@
+{
+  "appName": { "message": "Force Full Reload(SPA Block)" },
+  "appDesc": { "message": "Force full refresh on SPA sites when links are clicked." },
+  "enableFeature": { "message": "Enable Feature" },
+  "inputPlaceholder": { "message": "Enter example.com" },
+  "addBtn": { "message": "Add" },
+  "themeSystem": { "message": "Theme: System" },
+  "themeLight": { "message": "Theme: Light" },
+  "themeDark": { "message": "Theme: Dark" }
+}

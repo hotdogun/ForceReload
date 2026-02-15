@@ -1,0 +1,10 @@
+{
+  "appName": { "message": "Force Full Reload (SPA Block)" },
+  "appDesc": { "message": "SPA 사이트에서 링크 클릭 시 강제로 전체 새로고침을 수행합니다." },
+  "enableFeature": { "message": "기능 활성화" },
+  "inputPlaceholder": { "message": "example.com 입력" },
+  "addBtn": { "message": "추가" },
+  "themeSystem": { "message": "테마: 시스템" },
+  "themeLight": { "message": "테마: 라이트" },
+  "themeDark": { "message": "테마: 다크" }
+}
